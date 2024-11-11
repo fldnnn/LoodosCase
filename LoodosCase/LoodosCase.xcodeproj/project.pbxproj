@@ -13,6 +13,12 @@
 		3AB3CC182CDF8C5E004113C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC162CDF8C5E004113C4 /* Main.storyboard */; };
 		3AB3CC1A2CDF8C5F004113C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC192CDF8C5F004113C4 /* Assets.xcassets */; };
 		3AB3CC1D2CDF8C5F004113C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC1B2CDF8C5F004113C4 /* LaunchScreen.storyboard */; };
+		3AB3CC5E2CE26CEB004113C4 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC5D2CE26CEB004113C4 /* Splash.storyboard */; };
+		3AB3CC602CE26D08004113C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC5F2CE26D08004113C4 /* SplashViewController.swift */; };
+		3AB3CC622CE27043004113C4 /* SplashContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC612CE27043004113C4 /* SplashContract.swift */; };
+		3AB3CC642CE27094004113C4 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC632CE27094004113C4 /* SplashInteractor.swift */; };
+		3AB3CC662CE270A1004113C4 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC652CE270A1004113C4 /* SplashPresenter.swift */; };
+		3AB3CC6A2CE270B8004113C4 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC692CE270B8004113C4 /* SplashRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		3AB3CC192CDF8C5F004113C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB3CC1C2CDF8C5F004113C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB3CC1E2CDF8C5F004113C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB3CC5D2CE26CEB004113C4 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		3AB3CC5F2CE26D08004113C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		3AB3CC612CE27043004113C4 /* SplashContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashContract.swift; sourceTree = "<group>"; };
+		3AB3CC632CE27094004113C4 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		3AB3CC652CE270A1004113C4 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		3AB3CC692CE270B8004113C4 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,8 @@
 		3AB3CC0F2CDF8C5E004113C4 /* LoodosCase */ = {
 			isa = PBXGroup;
 			children = (
+				3AB3CC5B2CE26CA7004113C4 /* App */,
+				3AB3CC5A2CE26C72004113C4 /* Modules */,
 				3AB3CC102CDF8C5E004113C4 /* AppDelegate.swift */,
 				3AB3CC122CDF8C5E004113C4 /* SceneDelegate.swift */,
 				3AB3CC142CDF8C5E004113C4 /* ViewController.swift */,
@@ -65,6 +79,34 @@
 				3AB3CC1E2CDF8C5F004113C4 /* Info.plist */,
 			);
 			path = LoodosCase;
+			sourceTree = "<group>";
+		};
+		3AB3CC5A2CE26C72004113C4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3CC5C2CE26CB2004113C4 /* Splash */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3AB3CC5B2CE26CA7004113C4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3AB3CC5C2CE26CB2004113C4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3CC5D2CE26CEB004113C4 /* Splash.storyboard */,
+				3AB3CC5F2CE26D08004113C4 /* SplashViewController.swift */,
+				3AB3CC612CE27043004113C4 /* SplashContract.swift */,
+				3AB3CC632CE27094004113C4 /* SplashInteractor.swift */,
+				3AB3CC652CE270A1004113C4 /* SplashPresenter.swift */,
+				3AB3CC692CE270B8004113C4 /* SplashRouter.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +170,7 @@
 				3AB3CC1D2CDF8C5F004113C4 /* LaunchScreen.storyboard in Resources */,
 				3AB3CC1A2CDF8C5F004113C4 /* Assets.xcassets in Resources */,
 				3AB3CC182CDF8C5E004113C4 /* Main.storyboard in Resources */,
+				3AB3CC5E2CE26CEB004113C4 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +182,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AB3CC152CDF8C5E004113C4 /* ViewController.swift in Sources */,
+				3AB3CC6A2CE270B8004113C4 /* SplashRouter.swift in Sources */,
+				3AB3CC662CE270A1004113C4 /* SplashPresenter.swift in Sources */,
+				3AB3CC642CE27094004113C4 /* SplashInteractor.swift in Sources */,
 				3AB3CC112CDF8C5E004113C4 /* AppDelegate.swift in Sources */,
+				3AB3CC622CE27043004113C4 /* SplashContract.swift in Sources */,
 				3AB3CC132CDF8C5E004113C4 /* SceneDelegate.swift in Sources */,
+				3AB3CC602CE26D08004113C4 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +343,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +372,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
