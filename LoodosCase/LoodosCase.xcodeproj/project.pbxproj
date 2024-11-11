@@ -24,6 +24,9 @@
 		3AB3CC732CE29049004113C4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC722CE29049004113C4 /* FirebaseAnalytics */; };
 		3AB3CC752CE2904A004113C4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC742CE2904A004113C4 /* FirebaseMessaging */; };
 		3AB3CC772CE2904A004113C4 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC762CE2904A004113C4 /* FirebaseRemoteConfig */; };
+		3AB3CC7B2CE29AFE004113C4 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */; };
+		3AB3CC7D2CE29CBE004113C4 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC7C2CE29CBE004113C4 /* loading.json */; };
+		3AB3CC7F2CE29D48004113C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC7E2CE29D48004113C4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		3AB3CC632CE27094004113C4 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		3AB3CC652CE270A1004113C4 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		3AB3CC692CE270B8004113C4 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		3AB3CC7C2CE29CBE004113C4 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		3AB3CC7E2CE29D48004113C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 		3AB3CC0F2CDF8C5E004113C4 /* LoodosCase */ = {
 			isa = PBXGroup;
 			children = (
+				3AB3CC782CE29ADB004113C4 /* Utilities */,
 				3AB3CC5B2CE26CA7004113C4 /* App */,
 				3AB3CC5A2CE26C72004113C4 /* Modules */,
 				3AB3CC102CDF8C5E004113C4 /* AppDelegate.swift */,
@@ -87,6 +94,8 @@
 				3AB3CC192CDF8C5F004113C4 /* Assets.xcassets */,
 				3AB3CC1B2CDF8C5F004113C4 /* LaunchScreen.storyboard */,
 				3AB3CC1E2CDF8C5F004113C4 /* Info.plist */,
+				3AB3CC7C2CE29CBE004113C4 /* loading.json */,
+				3AB3CC7E2CE29D48004113C4 /* GoogleService-Info.plist */,
 			);
 			path = LoodosCase;
 			sourceTree = "<group>";
@@ -117,6 +126,22 @@
 				3AB3CC692CE270B8004113C4 /* SplashRouter.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		3AB3CC782CE29ADB004113C4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3CC792CE29AEC004113C4 /* Helpers */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		3AB3CC792CE29AEC004113C4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +218,8 @@
 				3AB3CC1A2CDF8C5F004113C4 /* Assets.xcassets in Resources */,
 				3AB3CC182CDF8C5E004113C4 /* Main.storyboard in Resources */,
 				3AB3CC5E2CE26CEB004113C4 /* Splash.storyboard in Resources */,
+				3AB3CC7D2CE29CBE004113C4 /* loading.json in Resources */,
+				3AB3CC7F2CE29D48004113C4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +235,7 @@
 				3AB3CC662CE270A1004113C4 /* SplashPresenter.swift in Sources */,
 				3AB3CC642CE27094004113C4 /* SplashInteractor.swift in Sources */,
 				3AB3CC112CDF8C5E004113C4 /* AppDelegate.swift in Sources */,
+				3AB3CC7B2CE29AFE004113C4 /* NetworkReachability.swift in Sources */,
 				3AB3CC622CE27043004113C4 /* SplashContract.swift in Sources */,
 				3AB3CC132CDF8C5E004113C4 /* SceneDelegate.swift in Sources */,
 				3AB3CC602CE26D08004113C4 /* SplashViewController.swift in Sources */,

@@ -9,6 +9,11 @@ import Foundation
 
 protocol SplashViewProtocol: AnyObject {
     var presenter: Splash.Presenter? { get set }
+    
+    func showNoInternetAlert()
+    func displayTitle(_ text: String)
+    func showLoadingAnimation()
+    func hideLoadingAnimation()
 }
 
 protocol SplashPresenterProtocol: AnyObject {
@@ -20,15 +25,18 @@ protocol SplashPresenterProtocol: AnyObject {
 }
 
 protocol SplashInteractorProtocol: AnyObject {
-    var presenter: Splash.InteractorToPresenter? { get set }
+    var output: Splash.InteractorToPresenter? { get set }
+    
+    func fetchRemoteConfig()
 }
 
 protocol SplashInteractorToPresenterProtocol: AnyObject {
-    
+    func remoteConfigFetched(title: String)
+    func remoteConfigFetchFailed(error: Error)
 }
 
 protocol SplashRouterProtocol: AnyObject {
-    
+    func navigateToHomeView(from view: UIViewController)
 }
 
 struct Splash {

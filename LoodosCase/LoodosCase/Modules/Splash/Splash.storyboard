@@ -18,21 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWD-Fh-OfZ">
-                                <rect key="frame" x="20" y="426" width="353" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="196.66666666666666" y="426" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LVm-Qs-fA1">
+                                <rect key="frame" x="156.66666666666666" y="386" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0XL-6I-sdT"/>
+                                    <constraint firstAttribute="width" constant="80" id="du8-dG-M8C"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EWD-Fh-OfZ" secondAttribute="trailing" constant="20" id="5Jw-h8-j7D"/>
+                            <constraint firstItem="LVm-Qs-fA1" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="IDI-Vs-9bX"/>
                             <constraint firstItem="EWD-Fh-OfZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gRN-gP-CbJ"/>
-                            <constraint firstItem="EWD-Fh-OfZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="r4h-iP-TVQ"/>
+                            <constraint firstItem="LVm-Qs-fA1" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="gcC-XZ-tdC"/>
                             <constraint firstItem="EWD-Fh-OfZ" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="zxd-Ay-RTZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationContainerView" destination="LVm-Qs-fA1" id="Q60-dd-yxa"/>
+                        <outlet property="titleLbl" destination="EWD-Fh-OfZ" id="WVh-TP-xip"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
