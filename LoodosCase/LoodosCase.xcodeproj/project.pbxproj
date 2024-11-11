@@ -19,6 +19,11 @@
 		3AB3CC642CE27094004113C4 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC632CE27094004113C4 /* SplashInteractor.swift */; };
 		3AB3CC662CE270A1004113C4 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC652CE270A1004113C4 /* SplashPresenter.swift */; };
 		3AB3CC6A2CE270B8004113C4 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC692CE270B8004113C4 /* SplashRouter.swift */; };
+		3AB3CC6D2CE28F72004113C4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC6C2CE28F72004113C4 /* Alamofire */; };
+		3AB3CC702CE28FA2004113C4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC6F2CE28FA2004113C4 /* Lottie */; };
+		3AB3CC732CE29049004113C4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC722CE29049004113C4 /* FirebaseAnalytics */; };
+		3AB3CC752CE2904A004113C4 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC742CE2904A004113C4 /* FirebaseMessaging */; };
+		3AB3CC772CE2904A004113C4 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB3CC762CE2904A004113C4 /* FirebaseRemoteConfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB3CC752CE2904A004113C4 /* FirebaseMessaging in Frameworks */,
+				3AB3CC6D2CE28F72004113C4 /* Alamofire in Frameworks */,
+				3AB3CC702CE28FA2004113C4 /* Lottie in Frameworks */,
+				3AB3CC732CE29049004113C4 /* FirebaseAnalytics in Frameworks */,
+				3AB3CC772CE2904A004113C4 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +135,13 @@
 			dependencies = (
 			);
 			name = LoodosCase;
+			packageProductDependencies = (
+				3AB3CC6C2CE28F72004113C4 /* Alamofire */,
+				3AB3CC6F2CE28FA2004113C4 /* Lottie */,
+				3AB3CC722CE29049004113C4 /* FirebaseAnalytics */,
+				3AB3CC742CE2904A004113C4 /* FirebaseMessaging */,
+				3AB3CC762CE2904A004113C4 /* FirebaseRemoteConfig */,
+			);
 			productName = LoodosCase;
 			productReference = 3AB3CC0D2CDF8C5E004113C4 /* LoodosCase.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +170,11 @@
 				Base,
 			);
 			mainGroup = 3AB3CC042CDF8C5E004113C4;
+			packageReferences = (
+				3AB3CC6B2CE28F71004113C4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3AB3CC6E2CE28FA2004113C4 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				3AB3CC712CE29049004113C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3AB3CC0E2CDF8C5E004113C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -408,6 +430,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3AB3CC6B2CE28F71004113C4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3AB3CC6E2CE28FA2004113C4 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		3AB3CC712CE29049004113C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3AB3CC6C2CE28F72004113C4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AB3CC6B2CE28F71004113C4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3AB3CC6F2CE28FA2004113C4 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AB3CC6E2CE28FA2004113C4 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		3AB3CC722CE29049004113C4 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AB3CC712CE29049004113C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3AB3CC742CE2904A004113C4 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AB3CC712CE29049004113C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		3AB3CC762CE2904A004113C4 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AB3CC712CE29049004113C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AB3CC052CDF8C5E004113C4 /* Project object */;
 }
