@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="LoodosCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="yef-VZ-XTJ">
+                                <rect key="frame" x="5" y="69" width="383" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="qW1-ef-6GL"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BxO-V1-ntB">
+                                <rect key="frame" x="0.0" y="165" width="393" height="653"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g0D-LE-Fzc">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zts-ft-zh6">
+                                <rect key="frame" x="156.66666666666666" y="386" width="80" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="EiH-Ld-if7"/>
+                                    <constraint firstAttribute="width" constant="80" id="i28-5s-wcl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BxO-V1-ntB" secondAttribute="bottom" id="FUZ-Rl-2Oz"/>
+                            <constraint firstItem="zts-ft-zh6" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="I6m-ex-lQp"/>
+                            <constraint firstItem="yef-VZ-XTJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="MXo-V9-1oW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BxO-V1-ntB" secondAttribute="trailing" id="U5o-rJ-pNm"/>
+                            <constraint firstItem="zts-ft-zh6" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WdK-cz-RNU"/>
+                            <constraint firstItem="BxO-V1-ntB" firstAttribute="top" secondItem="yef-VZ-XTJ" secondAttribute="bottom" constant="40" id="bdi-2c-lfX"/>
+                            <constraint firstItem="BxO-V1-ntB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fbO-Sx-Zfc"/>
+                            <constraint firstItem="yef-VZ-XTJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="k2x-Vf-dXZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yef-VZ-XTJ" secondAttribute="trailing" constant="5" id="y17-t2-WrD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationContainerView" destination="zts-ft-zh6" id="4uw-ge-gy0"/>
+                        <outlet property="movieCollectionView" destination="BxO-V1-ntB" id="qwX-S2-FaN"/>
+                        <outlet property="movieSearchBar" destination="yef-VZ-XTJ" id="TZ8-8n-1NL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

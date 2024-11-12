@@ -30,7 +30,7 @@ extension SplashPresenter: SplashInteractorToPresenterProtocol {
         view?.displayTitle(title)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.router?.navigateToHomeView(from: self.view!)
+            self.router?.navigateToHomeView()
         }
     }
     

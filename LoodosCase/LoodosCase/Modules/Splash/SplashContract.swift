@@ -36,7 +36,7 @@ protocol SplashInteractorToPresenterProtocol: AnyObject {
 }
 
 protocol SplashRouterProtocol: AnyObject {
-    func navigateToHomeView(from view: UIViewController)
+    func navigateToHomeView()
 }
 
 struct Splash {

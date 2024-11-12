@@ -8,6 +8,8 @@
 import UIKit
 
 class SplashRouter {
+    weak var view: UIViewController?
+    
     static func createModule() -> SplashViewController {
         let storyboard = UIStoryboard(name: "Splash", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "SplashViewController") as? SplashViewController else {
@@ -20,6 +22,7 @@ class SplashRouter {
         
         viewController.presenter = presenter
         
+        router.view = viewController
         presenter.view = viewController
         presenter.interactor = interactor
         presenter.router = router
@@ -31,10 +34,10 @@ class SplashRouter {
 }
 
 extension SplashRouter: SplashRouterProtocol {
-    func navigateToHomeView(from view: UIViewController) {
-        if let viewController = view as? UIViewController {
-//            let homeVC = HomeRouter.createModule()
-//            viewController.navigationController?.pushViewController(homeVC, animated: true)
-        }
+    func navigateToHomeView() {
+//        if let viewController = view as? UIViewController {
+        let homeVC = HomeRouter.createModule()
+        view?.navigationController?.pushViewController(homeVC, animated: true)
+//        }
     }
 }

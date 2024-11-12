@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A6A58E92CE37B4900A08D84 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3A6A58E82CE37B4900A08D84 /* Kingfisher */; };
+		3A6A58EC2CE37E2A00A08D84 /* HomeCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A58EB2CE37E2A00A08D84 /* HomeCollectionViewAdapter.swift */; };
+		3A6A58F12CE3A6D100A08D84 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A58F02CE3A6D100A08D84 /* UIViewController+Ext.swift */; };
 		3AB3CC112CDF8C5E004113C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC102CDF8C5E004113C4 /* AppDelegate.swift */; };
 		3AB3CC132CDF8C5E004113C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC122CDF8C5E004113C4 /* SceneDelegate.swift */; };
 		3AB3CC152CDF8C5E004113C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC142CDF8C5E004113C4 /* ViewController.swift */; };
@@ -27,9 +30,21 @@
 		3AB3CC7B2CE29AFE004113C4 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */; };
 		3AB3CC7D2CE29CBE004113C4 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC7C2CE29CBE004113C4 /* loading.json */; };
 		3AB3CC7F2CE29D48004113C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC7E2CE29D48004113C4 /* GoogleService-Info.plist */; };
+		3AB3CC822CE2AC5F004113C4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC812CE2AC5F004113C4 /* Home.storyboard */; };
+		3AB3CC842CE2AC6D004113C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC832CE2AC6D004113C4 /* HomeViewController.swift */; };
+		3AB3CC862CE2B1BC004113C4 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC852CE2B1BC004113C4 /* HomeContract.swift */; };
+		3AB3CC882CE2B1C7004113C4 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC872CE2B1C7004113C4 /* HomePresenter.swift */; };
+		3AB3CC8A2CE2B1D0004113C4 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC892CE2B1D0004113C4 /* HomeInteractor.swift */; };
+		3AB3CC8C2CE2B1D9004113C4 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC8B2CE2B1D9004113C4 /* HomeRouter.swift */; };
+		3AB3CC902CE2BB92004113C4 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC8E2CE2BB92004113C4 /* HomeCollectionViewCell.swift */; };
+		3AB3CC912CE2BB92004113C4 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AB3CC8F2CE2BB92004113C4 /* HomeCollectionViewCell.xib */; };
+		3AB3CC932CE2BC65004113C4 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC922CE2BC65004113C4 /* HomeEntity.swift */; };
+		3AB3CC962CE2C041004113C4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC952CE2C041004113C4 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A6A58EB2CE37E2A00A08D84 /* HomeCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		3A6A58F02CE3A6D100A08D84 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		3AB3CC0D2CDF8C5E004113C4 /* LoodosCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB3CC102CDF8C5E004113C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB3CC122CDF8C5E004113C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +62,16 @@
 		3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		3AB3CC7C2CE29CBE004113C4 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		3AB3CC7E2CE29D48004113C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AB3CC812CE2AC5F004113C4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3AB3CC832CE2AC6D004113C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3AB3CC852CE2B1BC004113C4 /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		3AB3CC872CE2B1C7004113C4 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		3AB3CC892CE2B1D0004113C4 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		3AB3CC8B2CE2B1D9004113C4 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		3AB3CC8E2CE2BB92004113C4 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		3AB3CC8F2CE2BB92004113C4 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		3AB3CC922CE2BC65004113C4 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
+		3AB3CC952CE2C041004113C4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6A58E92CE37B4900A08D84 /* Kingfisher in Frameworks */,
 				3AB3CC752CE2904A004113C4 /* FirebaseMessaging in Frameworks */,
 				3AB3CC6D2CE28F72004113C4 /* Alamofire in Frameworks */,
 				3AB3CC702CE28FA2004113C4 /* Lottie in Frameworks */,
@@ -65,6 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A6A58EA2CE37E0800A08D84 /* HomeCollectionViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A58EB2CE37E2A00A08D84 /* HomeCollectionViewAdapter.swift */,
+			);
+			path = HomeCollectionViewAdapter;
+			sourceTree = "<group>";
+		};
+		3A6A58ED2CE3A65E00A08D84 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A58F02CE3A6D100A08D84 /* UIViewController+Ext.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		3AB3CC042CDF8C5E004113C4 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +126,7 @@
 		3AB3CC0F2CDF8C5E004113C4 /* LoodosCase */ = {
 			isa = PBXGroup;
 			children = (
+				3AB3CC942CE2C033004113C4 /* Network */,
 				3AB3CC782CE29ADB004113C4 /* Utilities */,
 				3AB3CC5B2CE26CA7004113C4 /* App */,
 				3AB3CC5A2CE26C72004113C4 /* Modules */,
@@ -103,6 +146,7 @@
 		3AB3CC5A2CE26C72004113C4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3AB3CC802CE2AC50004113C4 /* Home */,
 				3AB3CC5C2CE26CB2004113C4 /* Splash */,
 			);
 			path = Modules;
@@ -131,6 +175,7 @@
 		3AB3CC782CE29ADB004113C4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3A6A58ED2CE3A65E00A08D84 /* Extensions */,
 				3AB3CC792CE29AEC004113C4 /* Helpers */,
 			);
 			name = Utilities;
@@ -142,6 +187,39 @@
 				3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		3AB3CC802CE2AC50004113C4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A58EA2CE37E0800A08D84 /* HomeCollectionViewAdapter */,
+				3AB3CC8D2CE2BB41004113C4 /* Cell */,
+				3AB3CC812CE2AC5F004113C4 /* Home.storyboard */,
+				3AB3CC832CE2AC6D004113C4 /* HomeViewController.swift */,
+				3AB3CC852CE2B1BC004113C4 /* HomeContract.swift */,
+				3AB3CC872CE2B1C7004113C4 /* HomePresenter.swift */,
+				3AB3CC892CE2B1D0004113C4 /* HomeInteractor.swift */,
+				3AB3CC8B2CE2B1D9004113C4 /* HomeRouter.swift */,
+				3AB3CC922CE2BC65004113C4 /* HomeEntity.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3AB3CC8D2CE2BB41004113C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3CC8E2CE2BB92004113C4 /* HomeCollectionViewCell.swift */,
+				3AB3CC8F2CE2BB92004113C4 /* HomeCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3AB3CC942CE2C033004113C4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3CC952CE2C041004113C4 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +244,7 @@
 				3AB3CC722CE29049004113C4 /* FirebaseAnalytics */,
 				3AB3CC742CE2904A004113C4 /* FirebaseMessaging */,
 				3AB3CC762CE2904A004113C4 /* FirebaseRemoteConfig */,
+				3A6A58E82CE37B4900A08D84 /* Kingfisher */,
 			);
 			productName = LoodosCase;
 			productReference = 3AB3CC0D2CDF8C5E004113C4 /* LoodosCase.app */;
@@ -199,6 +278,7 @@
 				3AB3CC6B2CE28F71004113C4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3AB3CC6E2CE28FA2004113C4 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				3AB3CC712CE29049004113C4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3A6A58E72CE37B4900A08D84 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 3AB3CC0E2CDF8C5E004113C4 /* Products */;
 			projectDirPath = "";
@@ -214,8 +294,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB3CC822CE2AC5F004113C4 /* Home.storyboard in Resources */,
 				3AB3CC1D2CDF8C5F004113C4 /* LaunchScreen.storyboard in Resources */,
 				3AB3CC1A2CDF8C5F004113C4 /* Assets.xcassets in Resources */,
+				3AB3CC912CE2BB92004113C4 /* HomeCollectionViewCell.xib in Resources */,
 				3AB3CC182CDF8C5E004113C4 /* Main.storyboard in Resources */,
 				3AB3CC5E2CE26CEB004113C4 /* Splash.storyboard in Resources */,
 				3AB3CC7D2CE29CBE004113C4 /* loading.json in Resources */,
@@ -230,11 +312,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6A58F12CE3A6D100A08D84 /* UIViewController+Ext.swift in Sources */,
 				3AB3CC152CDF8C5E004113C4 /* ViewController.swift in Sources */,
+				3AB3CC932CE2BC65004113C4 /* HomeEntity.swift in Sources */,
 				3AB3CC6A2CE270B8004113C4 /* SplashRouter.swift in Sources */,
 				3AB3CC662CE270A1004113C4 /* SplashPresenter.swift in Sources */,
+				3AB3CC882CE2B1C7004113C4 /* HomePresenter.swift in Sources */,
 				3AB3CC642CE27094004113C4 /* SplashInteractor.swift in Sources */,
+				3AB3CC902CE2BB92004113C4 /* HomeCollectionViewCell.swift in Sources */,
+				3A6A58EC2CE37E2A00A08D84 /* HomeCollectionViewAdapter.swift in Sources */,
 				3AB3CC112CDF8C5E004113C4 /* AppDelegate.swift in Sources */,
+				3AB3CC842CE2AC6D004113C4 /* HomeViewController.swift in Sources */,
+				3AB3CC8A2CE2B1D0004113C4 /* HomeInteractor.swift in Sources */,
+				3AB3CC962CE2C041004113C4 /* NetworkManager.swift in Sources */,
+				3AB3CC862CE2B1BC004113C4 /* HomeContract.swift in Sources */,
+				3AB3CC8C2CE2B1D9004113C4 /* HomeRouter.swift in Sources */,
 				3AB3CC7B2CE29AFE004113C4 /* NetworkReachability.swift in Sources */,
 				3AB3CC622CE27043004113C4 /* SplashContract.swift in Sources */,
 				3AB3CC132CDF8C5E004113C4 /* SceneDelegate.swift in Sources */,
@@ -460,6 +552,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3A6A58E72CE37B4900A08D84 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		3AB3CC6B2CE28F71004113C4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -487,6 +587,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3A6A58E82CE37B4900A08D84 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A6A58E72CE37B4900A08D84 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		3AB3CC6C2CE28F72004113C4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3AB3CC6B2CE28F71004113C4 /* XCRemoteSwiftPackageReference "Alamofire" */;
