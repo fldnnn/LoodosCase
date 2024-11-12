@@ -51,19 +51,19 @@ class NetworkManager {
         }
     }
     
-//    func getMovieDetail(imdbID: String, completion: @escaping (Result<MovieDetail, Error>) -> Void) {
-//        let parameters: Parameters = [
-//            "i": imdbID,
-//            "apikey": apiKey
-//        ]
-//        
-//        AF.request(baseURL, parameters: parameters).responseDecodable(of: MovieDetail.self) { response in
-//            switch response.result {
-//            case .success(let movieDetail):
-//                completion(.success(movieDetail))
-//            case .failure(let error):
-//                completion(.failure(error))
-//            }
-//        }
-//    }
+    func getMovieDetail(imdbID: String, completion: @escaping (Result<MovieDetail, Error>) -> Void) {
+        let parameters: Parameters = [
+            "i": imdbID,
+            "apikey": apiKey
+        ]
+
+        AF.request(baseURL, parameters: parameters).responseDecodable(of: MovieDetail.self) { response in
+            switch response.result {
+            case .success(let movieDetail):
+                completion(.success(movieDetail))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
