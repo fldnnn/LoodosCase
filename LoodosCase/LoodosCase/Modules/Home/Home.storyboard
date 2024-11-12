@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="yef-VZ-XTJ">
-                                <rect key="frame" x="5" y="69" width="383" height="56"/>
+                                <rect key="frame" x="5" y="64" width="383" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="qW1-ef-6GL"/>
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BxO-V1-ntB">
-                                <rect key="frame" x="0.0" y="165" width="393" height="653"/>
+                                <rect key="frame" x="0.0" y="160" width="393" height="658"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g0D-LE-Fzc">
                                     <size key="itemSize" width="128" height="128"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="zts-ft-zh6" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WdK-cz-RNU"/>
                             <constraint firstItem="BxO-V1-ntB" firstAttribute="top" secondItem="yef-VZ-XTJ" secondAttribute="bottom" constant="40" id="bdi-2c-lfX"/>
                             <constraint firstItem="BxO-V1-ntB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fbO-Sx-Zfc"/>
-                            <constraint firstItem="yef-VZ-XTJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="k2x-Vf-dXZ"/>
+                            <constraint firstItem="yef-VZ-XTJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="k2x-Vf-dXZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yef-VZ-XTJ" secondAttribute="trailing" constant="5" id="y17-t2-WrD"/>
                         </constraints>
                     </view>

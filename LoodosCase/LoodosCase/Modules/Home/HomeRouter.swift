@@ -35,6 +35,7 @@ class HomeRouter {
 
 extension HomeRouter: HomeRouterProtocol {
     func navigateToMovieDetail(with movieID: String) {
-        
+        let movieDetailVC = MovieDetailRouter.createModule(with: movieID)
+        view?.navigationController?.pushViewController(movieDetailVC, animated: true)
     }
 }

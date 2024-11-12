@@ -105,10 +105,15 @@ class HomeViewController: UIViewController, HomeViewProtocol {
 
 extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        movieSearchBar.showsCancelButton = true
         movieSearchBar.resignFirstResponder()
         if let query = searchBar.text, !query.isEmpty {
             presenter?.searchMovies(with: query)
         }
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        movieSearchBar.showsCancelButton = false
     }
 //    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 //
