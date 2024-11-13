@@ -10,7 +10,7 @@ import UIKit
 class MovieDetailRouter: MovieDetailRouterProtocol {
     weak var view: UIViewController?
     
-    static func createModule(with imdbID: String) -> MovieDetailViewController {
+    static func createModule(with imdbID: String, image: UIImage?) -> MovieDetailViewController {
         let storyboard = UIStoryboard(name: "MovieDetail", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as? MovieDetailViewController else {
             fatalError("MovieDetailView not found in MovieDetail.storyboard")
@@ -28,6 +28,10 @@ class MovieDetailRouter: MovieDetailRouterProtocol {
         presenter.imdbID = imdbID
         
         interactor.output = presenter
+        
+        if let image = image {
+                    viewController.initialImage = image
+                }
         
         return viewController
     }

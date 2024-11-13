@@ -25,8 +25,8 @@
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BxO-V1-ntB">
-                                <rect key="frame" x="0.0" y="160" width="393" height="658"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="140" width="393" height="712"/>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g0D-LE-Fzc">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -47,12 +47,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="BxO-V1-ntB" secondAttribute="bottom" id="FUZ-Rl-2Oz"/>
+                            <constraint firstAttribute="bottom" secondItem="BxO-V1-ntB" secondAttribute="bottom" id="FUZ-Rl-2Oz"/>
                             <constraint firstItem="zts-ft-zh6" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="I6m-ex-lQp"/>
                             <constraint firstItem="yef-VZ-XTJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="5" id="MXo-V9-1oW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="BxO-V1-ntB" secondAttribute="trailing" id="U5o-rJ-pNm"/>
                             <constraint firstItem="zts-ft-zh6" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="WdK-cz-RNU"/>
-                            <constraint firstItem="BxO-V1-ntB" firstAttribute="top" secondItem="yef-VZ-XTJ" secondAttribute="bottom" constant="40" id="bdi-2c-lfX"/>
+                            <constraint firstItem="BxO-V1-ntB" firstAttribute="top" secondItem="yef-VZ-XTJ" secondAttribute="bottom" constant="20" id="bdi-2c-lfX"/>
                             <constraint firstItem="BxO-V1-ntB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fbO-Sx-Zfc"/>
                             <constraint firstItem="yef-VZ-XTJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="k2x-Vf-dXZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yef-VZ-XTJ" secondAttribute="trailing" constant="5" id="y17-t2-WrD"/>

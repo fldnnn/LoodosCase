@@ -17,6 +17,9 @@
 		3A6A58FC2CE3AC2200A08D84 /* MovieDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A58FB2CE3AC2200A08D84 /* MovieDetailInteractor.swift */; };
 		3A6A58FE2CE3AC2F00A08D84 /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A58FD2CE3AC2F00A08D84 /* MovieDetailRouter.swift */; };
 		3A6A59002CE3AC4B00A08D84 /* MovieDetailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A58FF2CE3AC4B00A08D84 /* MovieDetailEntity.swift */; };
+		3A6A59022CE3FD0800A08D84 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A59012CE3FD0800A08D84 /* UIView+Ext.swift */; };
+		3A6A59052CE427D800A08D84 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A59042CE427D800A08D84 /* TransitionManager.swift */; };
+		3A6A59072CE427E500A08D84 /* SharedImageTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A59062CE427E500A08D84 /* SharedImageTransitionAnimator.swift */; };
 		3AB3CC112CDF8C5E004113C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC102CDF8C5E004113C4 /* AppDelegate.swift */; };
 		3AB3CC132CDF8C5E004113C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC122CDF8C5E004113C4 /* SceneDelegate.swift */; };
 		3AB3CC152CDF8C5E004113C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB3CC142CDF8C5E004113C4 /* ViewController.swift */; };
@@ -59,6 +62,10 @@
 		3A6A58FB2CE3AC2200A08D84 /* MovieDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailInteractor.swift; sourceTree = "<group>"; };
 		3A6A58FD2CE3AC2F00A08D84 /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
 		3A6A58FF2CE3AC4B00A08D84 /* MovieDetailEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailEntity.swift; sourceTree = "<group>"; };
+		3A6A59012CE3FD0800A08D84 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		3A6A59042CE427D800A08D84 /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		3A6A59062CE427E500A08D84 /* SharedImageTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedImageTransitionAnimator.swift; sourceTree = "<group>"; };
+		3A6A59092CE42D1200A08D84 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		3AB3CC0D2CDF8C5E004113C4 /* LoodosCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoodosCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB3CC102CDF8C5E004113C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB3CC122CDF8C5E004113C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				3A6A58F02CE3A6D100A08D84 /* UIViewController+Ext.swift */,
+				3A6A59012CE3FD0800A08D84 /* UIView+Ext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -133,6 +141,23 @@
 				3A6A58FF2CE3AC4B00A08D84 /* MovieDetailEntity.swift */,
 			);
 			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		3A6A59032CE4279900A08D84 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				3A6A59042CE427D800A08D84 /* TransitionManager.swift */,
+				3A6A59062CE427E500A08D84 /* SharedImageTransitionAnimator.swift */,
+			);
+			name = Transitions;
+			sourceTree = "<group>";
+		};
+		3A6A59082CE4282A00A08D84 /* NetworkReachability */ = {
+			isa = PBXGroup;
+			children = (
+				3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */,
+			);
+			name = NetworkReachability;
 			sourceTree = "<group>";
 		};
 		3AB3CC042CDF8C5E004113C4 = {
@@ -167,6 +192,7 @@
 				3AB3CC1E2CDF8C5F004113C4 /* Info.plist */,
 				3AB3CC7C2CE29CBE004113C4 /* loading.json */,
 				3AB3CC7E2CE29D48004113C4 /* GoogleService-Info.plist */,
+				3A6A59092CE42D1200A08D84 /* Config.xcconfig */,
 			);
 			path = LoodosCase;
 			sourceTree = "<group>";
@@ -213,7 +239,8 @@
 		3AB3CC792CE29AEC004113C4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3AB3CC7A2CE29AFE004113C4 /* NetworkReachability.swift */,
+				3A6A59082CE4282A00A08D84 /* NetworkReachability */,
+				3A6A59032CE4279900A08D84 /* Transitions */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -352,6 +379,7 @@
 				3AB3CC642CE27094004113C4 /* SplashInteractor.swift in Sources */,
 				3AB3CC902CE2BB92004113C4 /* HomeCollectionViewCell.swift in Sources */,
 				3A6A58FC2CE3AC2200A08D84 /* MovieDetailInteractor.swift in Sources */,
+				3A6A59072CE427E500A08D84 /* SharedImageTransitionAnimator.swift in Sources */,
 				3A6A58EC2CE37E2A00A08D84 /* HomeCollectionViewAdapter.swift in Sources */,
 				3AB3CC112CDF8C5E004113C4 /* AppDelegate.swift in Sources */,
 				3AB3CC842CE2AC6D004113C4 /* HomeViewController.swift in Sources */,
@@ -364,7 +392,9 @@
 				3AB3CC622CE27043004113C4 /* SplashContract.swift in Sources */,
 				3A6A59002CE3AC4B00A08D84 /* MovieDetailEntity.swift in Sources */,
 				3A6A58FA2CE3AC1900A08D84 /* MovieDetailPresenter.swift in Sources */,
+				3A6A59022CE3FD0800A08D84 /* UIView+Ext.swift in Sources */,
 				3AB3CC132CDF8C5E004113C4 /* SceneDelegate.swift in Sources */,
+				3A6A59052CE427D800A08D84 /* TransitionManager.swift in Sources */,
 				3A6A58F82CE3AC1100A08D84 /* MovieDetailContract.swift in Sources */,
 				3AB3CC602CE26D08004113C4 /* SplashViewController.swift in Sources */,
 			);
@@ -394,6 +424,7 @@
 /* Begin XCBuildConfiguration section */
 		3AB3CC1F2CDF8C5F004113C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6A59092CE42D1200A08D84 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -508,6 +539,7 @@
 		};
 		3AB3CC222CDF8C5F004113C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6A59092CE42D1200A08D84 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

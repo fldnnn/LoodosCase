@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol MovieDetailViewProtocol: AnyObject {
     var presenter: MovieDetailPresenterProtocol? { get set }
@@ -33,5 +34,5 @@ protocol MovieDetailInteractorOutputProtocol: AnyObject {
 }
 
 protocol MovieDetailRouterProtocol: AnyObject {
-    static func createModule(with imdbID: String) -> MovieDetailViewController
+    static func createModule(with imdbID: String, image: UIImage?) -> MovieDetailViewController
 }

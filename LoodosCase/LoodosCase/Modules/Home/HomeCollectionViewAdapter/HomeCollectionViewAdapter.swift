@@ -9,7 +9,7 @@ import UIKit
 
 protocol MovieCollectionViewAdapterDelegate: AnyObject {
     func loadMoreData()
-    func didSelectItem(at index: Int)
+    func didSelectItem(at index: Int, imageView: UIImageView)
 }
 
 class MovieCollectionViewAdapter: NSObject, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
@@ -50,7 +50,14 @@ class MovieCollectionViewAdapter: NSObject, UICollectionViewDelegateFlowLayout, 
 
     // UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectItem(at: indexPath.row)
+//        delegate?.didSelectItem(at: indexPath.row)
+        
+        
+        
+        if let movie = getMovie(at: indexPath.row),
+           let cell = collectionView.cellForItem(at: indexPath) as? HomeCollectionViewCell, let imageView = cell.movieImgView {
+            delegate?.didSelectItem(at: indexPath.row, imageView: imageView)
+        }
     }
 
     // UICollectionViewDelegateFlowLayout

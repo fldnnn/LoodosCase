@@ -31,14 +31,17 @@ import Alamofire
 //}
 class NetworkManager {
     static let shared = NetworkManager()
-    private let apiKey = "40fa665a"
+    private let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String
     private let baseURL = "http://www.omdbapi.com/"
 
     func searchMovies(query: String, page: Int, completion: @escaping (Result<SearchResponse, Error>) -> Void) {
+        guard let apiKey = apiKey else { return }
+        let rawApiKey = apiKey.trimmingCharacters(in: CharacterSet(charactersIn: "\""))
+        
         let parameters: Parameters = [
             "s": query,
             "page": page,
-            "apikey": apiKey
+            "apikey": rawApiKey
         ]
 
         AF.request(baseURL, parameters: parameters).responseDecodable(of: SearchResponse.self) { response in
@@ -52,9 +55,12 @@ class NetworkManager {
     }
     
     func getMovieDetail(imdbID: String, completion: @escaping (Result<MovieDetail, Error>) -> Void) {
+        guard let apiKey = apiKey else { return }
+        let rawApiKey = apiKey.trimmingCharacters(in: CharacterSet(charactersIn: "\""))
+        
         let parameters: Parameters = [
             "i": imdbID,
-            "apikey": apiKey
+            "apikey": rawApiKey
         ]
 
         AF.request(baseURL, parameters: parameters).responseDecodable(of: MovieDetail.self) { response in

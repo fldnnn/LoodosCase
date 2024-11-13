@@ -9,12 +9,7 @@ import Foundation
 
 class MovieDetailInteractor: MovieDetailInteractorProtocol {
     weak var output: MovieDetailInteractorOutputProtocol?
-//    private var imdbID: String
-//
-//    init(imdbID: String) {
-//        self.imdbID = imdbID
-//    }
-
+    
     func fetchMovieDetail(with imdbID: String) {
         NetworkManager.shared.getMovieDetail(imdbID: imdbID) { [weak self] result in
             guard let self = self else { return }

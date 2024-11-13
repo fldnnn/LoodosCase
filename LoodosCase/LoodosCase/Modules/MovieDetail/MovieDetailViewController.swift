@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
-class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
+class MovieDetailViewController: UIViewController, MovieDetailViewProtocol, ImageTransitionable {
     var presenter: MovieDetailPresenterProtocol?
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     
@@ -21,12 +22,25 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
     @IBOutlet weak var plotLbl: UILabel!
     @IBOutlet weak var genreLbl: UILabel!
     @IBOutlet weak var directorLbl: UILabel!
+    @IBOutlet weak var directorDefaultLbl: UILabel!
+    @IBOutlet weak var genreDefaultLbl: UILabel!
     
+    var initialImage: UIImage? {
+        didSet {
+            if isViewLoaded {
+                movieImgView.image = initialImage
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         presenter?.viewDidLoad()
+        
+        if let image = initialImage {
+            movieImgView.image = image
+        }
     }
     
     private func setupUI() {
@@ -34,10 +48,13 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
         view.addSubview(activityIndicator)
         activityIndicator.center = view.center
         
-        blurView.alpha = 0.7
+        blurView.alpha = 0.3
         blurView.backgroundColor = .black
-        blurView.isHidden = true
+//        blurView.isHidden = true
         movieOpaqueImgView.contentMode = .scaleAspectFill
+        movieImgView.clipsToBounds = true
+        movieImgView.layer.masksToBounds = true
+        movieImgView.layer.cornerRadius = 5
         
         let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
         let blurView = UIVisualEffectView(effect: blurEffect)
@@ -45,9 +62,10 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
         movieOpaqueImgView.addSubview(blurView)
         
         let backButton = UIBarButtonItem(title: "Home", style: .plain, target: self, action: #selector(backButtonTapped))
-        let add = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: #selector(backButtonTapped))
+        backButton.tintColor = UIColor(red: 92/255, green: 167/255, blue: 183/255, alpha: 1.0)
+        let add = UIBarButtonItem(image: UIImage(systemName: "chevron.backward")?.withTintColor(UIColor(red: 92/255, green: 167/255, blue: 183/255, alpha: 1.0), renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItems = [add, backButton]
-        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.tintColor = UIColor.white
     
         titleLbl.text = ""
         yearLbl.text = ""
@@ -56,7 +74,13 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
         plotLbl.text = ""
         directorLbl.text = ""
         genreLbl.text = ""
+        directorDefaultLbl.text = ""
+        genreLbl.text = ""
         
+        view.applyGradient(colors: [
+            UIColor(red: 50/255, green: 50/255, blue: 50/255, alpha: 1),
+            UIColor(red: 30/255, green: 30/255, blue: 30/255, alpha: 1)
+        ])
     }
     
     @objc func backButtonTapped() {
@@ -73,6 +97,8 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
         plotLbl.text = movieDetail.plot
         directorLbl.text = movieDetail.director
         genreLbl.text = movieDetail.genre
+        directorDefaultLbl.text = "DIRECTOR"
+        genreDefaultLbl.text = "GENRE"
         
         if let poster = movieDetail.poster, let url = URL(string: poster) {
             movieImgView.kf.setImage(with: url)
@@ -80,6 +106,13 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
         } else {
             movieImgView.image = UIImage(named: "placeholder")
         }
+
+        Analytics.logEvent("movie_detail_viewed", parameters: [
+            "movie_title": movieDetail.title,
+            "movie_imdb": movieDetail.imdbRating,
+            "movie_actors": movieDetail.actors,
+            "movie_country": movieDetail.country
+        ])
     }
     
     func showError(_ message: String) {
@@ -93,4 +126,8 @@ class MovieDetailViewController: UIViewController, MovieDetailViewProtocol {
     func hideLoading() {
         activityIndicator.stopAnimating()
     }
+    
+    var transitioningImageView: UIImageView? {
+            return movieImgView
+        }
 }

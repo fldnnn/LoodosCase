@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomeViewProtocol: AnyObject {
     var presenter: Home.Presenter? { get set }
@@ -28,7 +29,7 @@ protocol HomePresenterProtocol: AnyObject {
     func searchMovies(with query: String)
     func refreshMovies()
     func loadMoreMovies()
-    func didSelectMovie(_ movie: Movie)
+    func didSelectMovie(_ movie: Movie, fromImageView: UIImageView)
 }
 
 protocol HomeInteractorProtocol: AnyObject {
@@ -44,7 +45,7 @@ protocol HomeInteractorToPresenterProtocol: AnyObject {
 }
 
 protocol HomeRouterProtocol: AnyObject {
-    func navigateToMovieDetail(with movieID: String)
+    func navigateToMovieDetail(with movieID: String, fromImageView: UIImageView)
 }
 
 struct Home {

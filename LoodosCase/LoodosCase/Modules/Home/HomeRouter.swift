@@ -9,6 +9,7 @@ import UIKit
 
 class HomeRouter {
     weak var view: UIViewController?
+    private var transitionManager: TransitionManager?
     
     static func createModule() -> HomeViewController {
         let storyboard = UIStoryboard(name: "Home", bundle: nil)
@@ -34,8 +35,23 @@ class HomeRouter {
 }
 
 extension HomeRouter: HomeRouterProtocol {
-    func navigateToMovieDetail(with movieID: String) {
-        let movieDetailVC = MovieDetailRouter.createModule(with: movieID)
-        view?.navigationController?.pushViewController(movieDetailVC, animated: true)
+    func navigateToMovieDetail(with movieID: String, fromImageView: UIImageView) {
+        let movieDetailVC = MovieDetailRouter.createModule(with: movieID, image: fromImageView.image)
+        if let navigationController = view?.navigationController,
+           let destinationViewController = movieDetailVC as? MovieDetailViewController {
+            _ = destinationViewController.view
+            transitionManager = TransitionManager()
+            transitionManager?.originImageView = fromImageView
+            transitionManager?.destinationImageView = fromImageView
+            navigationController.delegate = transitionManager
+            
+            navigationController.pushViewController(movieDetailVC, animated: true)
+            
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                navigationController.delegate = nil
+                self.transitionManager = nil
+            }
+        }
     }
 }

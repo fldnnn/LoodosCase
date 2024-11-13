@@ -17,13 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
+
         let window = UIWindow(windowScene: windowScene)
         let splashViewController = SplashRouter.createModule()
         let navigationController = UINavigationController(rootViewController: splashViewController)
         window.rootViewController = navigationController
-
+        
         self.window = window
+        self.window!.overrideUserInterfaceStyle = .dark
         window.makeKeyAndVisible()
     }
 
@@ -47,6 +48,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        
+        (UIApplication.shared.delegate as? AppDelegate)?.scheduleLocalNotification()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

@@ -5,7 +5,7 @@
 //  Created by fulden onan on 12.11.2024.
 //
 
-import Foundation
+import UIKit
 
 class HomePresenter: HomePresenterProtocol {
     weak var view: HomeViewProtocol?
@@ -46,9 +46,9 @@ class HomePresenter: HomePresenterProtocol {
         interactor?.fetchMovies(query: currentQuery, page: currentPage)
     }
     
-    func didSelectMovie(_ movie: Movie) {
+    func didSelectMovie(_ movie: Movie, fromImageView: UIImageView) {
         if let id = movie.imdbID {
-            router?.navigateToMovieDetail(with: id)
+            router?.navigateToMovieDetail(with: id, fromImageView: fromImageView)
         }
     }
 }
@@ -78,7 +78,7 @@ extension HomePresenter: HomeInteractorToPresenterProtocol {
         view?.hideLoading()
         self.movies.removeAll()
         view?.updateMovies([])
-        view?.showNoResultsMessage("Aradığınız kriterlere uygun film bulunamadı.")
+        view?.showNoResultsMessage("No movies found matching your criteria.")
     }
 }
 
